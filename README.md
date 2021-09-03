@@ -1,2 +1,2 @@
 # leetcode
-Leetcode by python
+Python解答LeetCode的算法题
