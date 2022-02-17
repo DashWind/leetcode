@@ -12,19 +12,19 @@ def length_of_longest_substring(s):
     :return: int
     """
     occ = set()
-    max_length = 0
-    start = 0
+    result = 0
+    p = 0
     for i in range(len(s)):
         while s[i] in occ:
-            occ.remove(s[start])
-            start += 1
+            occ.remove(s[p])
+            p += 1
         occ.add(s[i])
-        curr_length = i - start + 1
-        max_length = max(curr_length, max_length)
-    return max_length
+        result = max(i - p + 1, result)
+
+    return result
 
 
 if __name__ == "__main__":
-    ss = "abcabcbb"
+    ss = " "
     res = length_of_longest_substring(ss)
     print(res)
